@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1440957918 source:c:\users\gustavo\desktop\jogodavelha\main.cpp
+	<iostream>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
+1442278604 source:e:\jogodavelha\main.cpp
+	<iostream>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
+1441153356 source:f:\jogodavelha\main.cpp
+	<iostream>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
