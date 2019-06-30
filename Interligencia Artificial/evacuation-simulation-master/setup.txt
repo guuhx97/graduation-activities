@@ -1,0 +1,5 @@
+adicione os JARS jade e codecs com o nome de jade e codecs.
+
+passe parâmetros de execução para a JVM (1º parâmetro: número de agentes; 2º parâmetro: número de linhas da matriz; 3º parâmetro: número de colunas na matriz)
+
+se acontecer uma exceção com esse código "ICP exception", provavelmente o SO já está usando essa porta e se vc mudar a porta, vai funcionar.
