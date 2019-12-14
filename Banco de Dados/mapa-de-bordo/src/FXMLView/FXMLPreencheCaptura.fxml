@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="364.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLPreencheCapturaController">
+   <children>
+      <Label layoutX="190.0" layoutY="60.0" text="Cadastro Especie">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="151.0" text="Especie">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbxEspecie" layoutX="136.0" layoutY="153.0" prefHeight="31.0" prefWidth="367.0" promptText="Selecione a Especie" />
+      <Label layoutX="33.0" layoutY="214.0" text="Peso(kg)">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="taPeso" layoutX="136.0" layoutY="216.0" prefHeight="31.0" prefWidth="144.0" />
+      <Button fx:id="btCadastrar" layoutX="203.0" layoutY="273.0" mnemonicParsing="false" onAction="#cadastrarCaptura" prefHeight="43.0" prefWidth="155.0" text="Cadastrar">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

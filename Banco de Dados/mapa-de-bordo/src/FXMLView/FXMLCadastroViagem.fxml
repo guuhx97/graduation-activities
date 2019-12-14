@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLCadastroViagemController">
+   <children>
+      <ComboBox fx:id="cbxPortoSaida" layoutX="173.0" layoutY="259.0" prefHeight="36.0" prefWidth="348.0" promptText="Selecione Porto Saida" />
+      <ComboBox fx:id="cbxPortoChegada" layoutX="173.0" layoutY="205.0" prefHeight="36.0" prefWidth="348.0" promptText="Selecione Porto Chegada" />
+      <DatePicker fx:id="dpDataSaida" layoutX="125.0" layoutY="310.0" prefHeight="36.0" prefWidth="132.0" promptText="Data Saida" />
+      <DatePicker fx:id="dpDataChegada" layoutX="389.0" layoutY="311.0" prefHeight="36.0" prefWidth="132.0" promptText="Data Chegada" />
+      <Label layoutX="32.0" layoutY="262.0" text="Porto Saida" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="313.0" text="Data Saida" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="208.0" text="Porto Chegada" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="313.0" text="Data Chegada" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="156.0" text="Embarcação" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbxEmbarcacao" layoutX="173.0" layoutY="153.0" prefHeight="36.0" prefWidth="348.0" promptText="Selecione a Embarcação..." visibleRowCount="5" />
+      <ImageView fitHeight="99.0" fitWidth="96.0" layoutX="55.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/Viagem.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="182.0" layoutY="53.0" prefHeight="55.0" prefWidth="289.0" text="Cadastro de Viagens" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btFinalizar" layoutX="69.0" layoutY="380.0" mnemonicParsing="false" onAction="#finalizarCadastroViagem" prefHeight="43.0" prefWidth="164.0" text="Finalizar Viagem">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btAvancar" layoutX="307.0" layoutY="380.0" mnemonicParsing="false" onAction="#avancarCadastroLance" prefHeight="43.0" prefWidth="164.0" text="Cadastrar Lance">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

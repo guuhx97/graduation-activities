@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLCadastroCapturaController">
+   <children>
+      <TableView fx:id="tabelaCaptura" layoutX="24.0" layoutY="14.0" prefHeight="523.0" prefWidth="469.0">
+        <columns>
+          <TableColumn fx:id="colunaEspecie" prefWidth="302.0" text="Especie" />
+            <TableColumn fx:id="colunaPeso" prefWidth="166.0" text="Peso(Kg)" />
+        </columns>
+      </TableView>
+      <Button fx:id="btCadatrar" layoutX="528.0" layoutY="69.0" mnemonicParsing="false" onAction="#inserirCadastro" text="Cadastrar +">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btFinalizar" layoutX="528.0" layoutY="132.0" mnemonicParsing="false" onAction="#finalizarCaptura" prefHeight="43.0" prefWidth="119.0" text="Finalizar">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

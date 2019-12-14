@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLTesteLance">
+   <children>
+      <TableView fx:id="tabelaEspecie" layoutX="14.0" layoutY="37.0" onMouseClicked="#clickItem" prefHeight="395.0" prefWidth="771.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="180.0">
+         <columns>
+            <TableColumn fx:id="colunaNome" prefWidth="74.0" text="Comp. Rede" />
+            <TableColumn fx:id="colunaProfMax" prefWidth="79.0" text="Altura Rede" />
+            <TableColumn fx:id="colunaProfMin" editable="false" prefWidth="113.0" sortable="false" text="Tamanho Malha" />
+            <TableColumn fx:id="colunaProfundidade" prefWidth="84.0" text="Profundidade" />
+            <TableColumn fx:id="colunaLatitude" prefWidth="75.0" text="Latitude" />
+            <TableColumn fx:id="colunaLongitude" prefWidth="75.0" text="Longitude" />
+            <TableColumn fx:id="colunaData" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="colunaHoraInicial" prefWidth="75.0" text="Hora Inicial" />
+            <TableColumn fx:id="colunaHoraFinal" prefWidth="75.0" text="Hora Final" />
+         </columns>
+      </TableView>
+      <Button fx:id="btNovoLance" layoutX="806.0" layoutY="52.0" mnemonicParsing="false" onAction="#novoLance" text="Novo Lance">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btCaptura" layoutX="806.0" layoutY="111.0" mnemonicParsing="false" onAction="#capturaCadastro" prefHeight="43.0" prefWidth="117.0" text="Captura">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btFinaliza" layoutX="806.0" layoutY="172.0" mnemonicParsing="false" onAction="#finalizaOuCancela" prefHeight="43.0" prefWidth="117.0" text="Finaliza">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btCancela" layoutX="806.0" layoutY="228.0" mnemonicParsing="false" onAction="#finalizaOuCancela" prefHeight="43.0" prefWidth="117.0" text="Cancela">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

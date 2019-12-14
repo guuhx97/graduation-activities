@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import FXMLController.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="413.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLCadastroPortoController">
+   <children>
+      <ImageView fitHeight="114.0" fitWidth="79.0" layoutX="36.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/Porto.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="139.0" layoutY="55.0" text="Cadastrar Porto" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="214.0" text="Administração" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="159.0" text="Nome Porto" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="taNomePorto" layoutX="164.0" layoutY="162.0" prefHeight="29.0" prefWidth="193.0">
+         <font>
+            <Font name="MT Extra" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btCadastrar" layoutX="126.0" layoutY="337.0" mnemonicParsing="false" onAction="#adicionarListaPorto" text="Cadastrar Novo" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="35.0" layoutY="267.0" text="Fundação" textFill="#6e6e6e">
+         <font>
+            <Font name="MT Extra" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbxAdministracao" layoutX="164.0" layoutY="214.0" prefHeight="35.0" prefWidth="193.0" promptText="Selecione..." visibleRowCount="2" />
+      <MaskTextField fx:id="tfFundacao" layoutX="164.0" layoutY="267.0" prefHeight="35.0" prefWidth="92.0" />
+   </children>
+</AnchorPane>

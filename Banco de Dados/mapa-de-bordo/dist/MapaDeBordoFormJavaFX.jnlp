@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MapaDeBordoFormJavaFX.jnlp">
+  <information>
+    <title>MapaDeBordoFormJavaFX</title>
+    <vendor>Gusta</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MapaDeBordoFormJavaFX.jar" size="2342644" download="eager" />
+    <jar href="lib\postgresql-42.1.1.jre6.jar" size="707647" download="eager" />
+    <jar href="lib\scenebuilder-kit-8.3.0.jar" size="2522739" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MapaDeBordoFormJavaFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="MapaDeBordo.MapaDeBordoFormJavaFX"  name="MapaDeBordoFormJavaFX" />
+  <update check="always"/>
+</jnlp>

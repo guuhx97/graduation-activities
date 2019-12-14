@@ -1,0 +1,20 @@
+Select date_trunc('month', lance.data) as mes,date_trunc('year', lance.data) as ano, sum(especie_lance.peso) as total, especie.nome as especie  
+from especie_lance 
+inner join lance on (especie_lance.lance_id = lance.id)
+inner join especie on (especie_lance.especie_id = especie.id)
+group by   date_trunc( 'month', lance.data ),date_trunc( 'year', lance.data ),especie.nome;
+
+Select  date_trunc('month', lance.data) as mes,date_trunc('year', lance.data) as ano, embarcacao.nome as nome, sum(especie_lance.peso) as total, count(viagem.id) as N_viagens
+from viagem 
+inner join embarcacao on (embarcacao.id = viagem.embarcacao_id)
+inner join lance on (viagem.id = lance.viagem_id)
+inner join especie_lance on (lance.id = especie_lance.lance_id)
+group by  date_trunc( 'month', lance.data ),date_trunc( 'year', lance.data ), embarcacao.nome;
+
+--nao ta pronta
+Select  date_trunc('month', lance.data) as mes,date_trunc('year', lance.data) as ano, sum(especie_lance.peso) as total, count(viagem.id) as N_viagens 
+from viagem 
+inner join embarcacao on (embarcacao.id = viagem.embarcacao_id)
+inner join lance on (viagem.id = lance.viagem_id)
+inner join especie_lance on (lance.id = especie_lance.lance_id)
+group by  date_trunc( 'month', lance.data ),date_trunc( 'year', lance.data );

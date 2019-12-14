@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController.FXMLPreencheLance">
+   <children>
+      <Label layoutX="198.0" layoutY="48.0" text="Cadastre Lance">
+         <font>
+            <Font name="MT Extra" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="318.0" text="Altura Rede">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="131.0" text="Data">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="195.0" text="Hora Final">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="195.0" text="Hora Inicial">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="318.0" text="Comp. Rede">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="262.0" text="Produndidade">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="390.0" text="Latitude">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="299.0" layoutY="390.0" text="Longitude">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpData" layoutX="159.0" layoutY="139.0" prefHeight="33.0" prefWidth="384.0" />
+      <TextField fx:id="taHoraInicial" layoutX="159.0" layoutY="199.0" prefHeight="33.0" prefWidth="121.0" />
+      <TextField fx:id="taHoraFinal" layoutX="420.0" layoutY="199.0" prefHeight="33.0" prefWidth="121.0" />
+      <TextField fx:id="taProfundidade" layoutX="159.0" layoutY="266.0" prefHeight="33.0" prefWidth="124.0" />
+      <TextField fx:id="taLatitude" layoutX="159.0" layoutY="394.0" prefHeight="33.0" prefWidth="121.0" />
+      <TextField fx:id="taCompRede" layoutX="420.0" layoutY="322.0" prefHeight="33.0" prefWidth="121.0" />
+      <TextField fx:id="taLongitude" layoutX="422.0" layoutY="394.0" prefHeight="33.0" prefWidth="121.0" />
+      <TextField fx:id="taAlturaRede" layoutX="159.0" layoutY="322.0" prefHeight="33.0" prefWidth="121.0" />
+      <Button fx:id="btCadastrar" layoutX="226.0" layoutY="455.0" mnemonicParsing="false" onAction="#jogarPraLancePraLista" prefHeight="43.0" prefWidth="146.0" text="Cadastrar">
+         <font>
+            <Font name="MT Extra" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="315.0" layoutY="262.0" text="Malha">
+         <font>
+            <Font name="MT Extra" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="taMalhaRede" layoutX="420.0" layoutY="266.0" prefHeight="33.0" prefWidth="121.0" />
+   </children>
+</AnchorPane>
