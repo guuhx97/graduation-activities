@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Trabalhos Faculdade" width="300px" src=".github/logo.jpg" />
+    <img alt="Trabalhos Faculdade" width="300px" src=".github/logo.png" />
 </h1>
 
 <h4 align="center">
