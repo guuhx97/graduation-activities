@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Maior=0,Menor=2147483647,Cmaior=0,Cmenor=0;
+    for(int i=0;i<5;i++){
+        int vetor[5];
+        cout<<"informe o valor";
+        cin>>vetor[i];
+            if(vetor[i] > Maior){
+                Maior = vetor[i];
+                Cmaior = i;
+
+            }else if(vetor[i] < Menor){
+                Menor = vetor[i];
+                Cmenor = i;
+            }
+    }
+
+    cout<<Maior;
+    cout<<Cmaior;
+    cout<<Menor;
+    cout<<Cmenor;
+
+
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    int somaColuna=0,menorSoma=2147483647;
+    int matrizX[5][5] = {{1,2,3,4,5},{3,4,5,6,7},{8,9,10,11,-12},{13,14,15,16,17},{18,20,30,45,55}};
+    int matrizY[5][5] = {{13,5,2,9,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5},{1,2,3,4,5}};
+    int matrizW[5][5];
+    int vetor[5];
+    for(int i =0;i<5;i++){
+        for(int j =0;j<5;j++){
+            if(matrizX[i][j] <= matrizY[i][j]){
+                matrizW[i][j] = matrizX[i][j];
+            }else{
+                matrizW[i][j] = matrizY[i][j];
+            }
+            if(i==j){
+                vetor[i] = matrizX[i][j];
+            }
+
+            somaColuna += matrizY[j][i];
+        }
+
+            if(somaColuna < menorSoma){
+                menorSoma = somaColuna;
+            }
+        somaColuna=0;
+    }
+
+
+   /*for(int i =0;i<5;i++){
+        for(int j =0;j<5;j++){
+            cout<<matrizW[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    for(int i =0;i<5;i++){
+        cout<<vetor[i]<<" ";
+    }*/
+    cout<<menorSoma;
+    }

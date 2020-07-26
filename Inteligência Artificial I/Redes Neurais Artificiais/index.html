@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redes Neurais Artificiais</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="title is-2">
+          Reconhecendo padrões com <strong>redes neurais artificiais</strong>
+      </div>
+      <h4 class="subtitle is-4">Eliel Silvério Junior e Gustavo Roberto Souza</h4>
+    </div>
+  </div>
+</section>
+
+<div class="vertebralColumn">
+	<section class="hero is-default">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<div class="title is-4">
+					Reconhecimento da <strong> coluna vertebral</strong> (resultados)
+				</div>
+				<ul class="has-text-left">
+					<li>Erro: <span class="trainError"></span></li>
+					<li>Iterações: <span class="iterations"></span></li>
+					<li>Tempo (ms): <span class="time"></span></li>
+					<li>RNA Acertos: <span class="hits"></span></li>
+					<li>RNA Erros: <span class="mistakes"></span></li>
+					<li>Entradas: Incidência pélvica, Inclinação pélvica, Ângulo de lordose lombar, Inclinação sacral, Raio pélvico, Grau de espondilolistese</li>
+					<li>Dataset: <a href="http://archive.ics.uci.edu/ml/datasets/Vertebral+Column#" class="tag link">http://archive.ics.uci.edu/ml/datasets/Vertebral+Column</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="container">
+		<div class="title is-5 has-text-centered">
+			Parâmetros
+		</div>
+		<div class="columns">
+			<div class="column">
+				<div class="field">
+					<label class="label">Taxa de erro aceitável</label>
+					<div class="field">
+						<p class="control">
+							<input class="input acceptError" type="text" placeholder="Erro aceitável">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="field">
+					<label class="label">Quantidade máxima de iterações</label>
+					<div class="field">
+						<p class="control">
+							<input class="input maxIterations" type="text" placeholder="Quantidade máx. iterações">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="field">
+					<label class="label">Quantidade oculta</label>
+					<div class="field">
+						<p class="control">
+							<input class="input hiddenAmount" type="text" placeholder="Quantidade oculta">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="field">
+					<label class="label">Taxa de aprendizado</label>
+					<div class="field is-grouped">
+						<p class="control">
+							<input class="input rate" type="text" placeholder="Taxa">
+						</p>
+						<p class="control">
+							<a class="button is-info recalcular">Recalcular</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Número</th>
+					<th>Entradas</th>
+					<th>Saídas esperadas</th>
+					<th>Saídas</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Número</th>
+					<th>Entradas</th>
+					<th>Saídas esperadas</th>
+					<th>Saídas</th>
+					<th>Resultado</th>
+				</tr>
+			</tfoot>
+			<tbody>
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.0.10/synaptic.js"></script>
+<script src="app/db.js"></script>
+<script src="app/network.js"></script>
+<script src="app/config.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1438834994 source:f:\univali\algoritimo e programação ii\exercicio\main.cpp
+	<iostream>
+	<time.h>
+	<stdlib.h>
+

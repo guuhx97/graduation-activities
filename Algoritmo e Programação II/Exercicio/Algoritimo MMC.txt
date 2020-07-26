@@ -1,0 +1,13 @@
+int MMC(int den1,int den2,int div = 2){
+    if(den1 == 1 and den2 == 1){
+        return 1;
+    }else if(den1 % div == 0 and den2 % div == 0){
+        return  div * MMC(den1/div, den2/div, div);
+    }else if(den1 % div == 0){
+        return div * MMC(den1/div,den2,div);
+    }else if(den2 % div == 0){
+        return div * MMC(den1,den2/div,div);
+    }else{
+        return MMC(den1,den2,++div);
+    }
+}

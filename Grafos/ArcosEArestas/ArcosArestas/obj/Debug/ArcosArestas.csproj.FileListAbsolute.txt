@@ -1,0 +1,6 @@
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\bin\Debug\ArcosArestas.exe
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\bin\Debug\ArcosArestas.pdb
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\obj\Debug\ArcosArestas.csprojAssemblyReference.cache
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\obj\Debug\ArcosArestas.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\obj\Debug\ArcosArestas.exe
+C:\Users\Gustavo Souza\RiderProjects\ArcosEArestas\ArcosArestas\obj\Debug\ArcosArestas.pdb

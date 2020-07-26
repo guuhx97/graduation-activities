@@ -1,0 +1,75 @@
+FUNCTION_BLOCK fibraotica	// Block definition (there may be more than one block per file)
+
+VAR_INPUT	// Define input variables
+	tamanho_cabo : REAL; // tamanho do cabo
+	quantidade_emenda : REAL; //quantidade de emendas no cabo
+END_VAR
+
+VAR_OUTPUT	// Define output variable
+	atenuacao : REAL; // atenuação no cabo
+END_VAR
+
+FUZZIFY tamanho_cabo	// Fuzzify input variable 'tamanho do cabo': {'muito_pequeno', 'pequeno', 'medio', 'grande', 'muito_grande'}
+	TERM muito_pequeno := (0, 1) (50, 0);
+	TERM pequeno := (30, 0) (110, 1) (250, 0);
+	TERM medio  := (200, 0) (375, 1) (550, 0);
+	TERM grande := (500, 0) (625, 1) (750, 0);
+	TERM muito_grande := (700, 0) (1000, 1);
+END_FUZZIFY
+
+FUZZIFY quantidade_emenda	// Fuzzify input variable 'quantidade de emendas': {'muito_pequena', 'pequena', 'media', 'grande', 'muito_grande'}
+  TERM muito_pequena := (0, 1) (4, 0);
+	TERM pequena := (3, 0) (5.50, 1) (8, 0);
+	TERM media := (7, 0) (9.50, 1) (12, 0);
+	TERM grande  := (11, 0) (13.50, 1) (16, 0);
+  TERM muito_grande := (15, 0) (20, 1);
+END_FUZZIFY
+
+DEFUZZIFY atenuacao 	// Defuzzify output variable 'atenuação do cabo': {'muito_pequena', 'pequena', 'media', 'grande', 'muito_grande'}
+	TERM muito_pequena := (0, 1) (2.25, 0);
+	TERM pequena := (2, 0) (3.25, 1) (4.50, 0);
+	TERM media  := (4, 0) (5.25, 1) (6.50, 0);
+	TERM grande := (6, 0) (7.25, 1) (8.50, 0);
+	TERM muito_grande := (8, 0) (12, 1);
+	METHOD : COG;		// Use 'Center Of Gravity' defuzzification method
+	DEFAULT := 0;		// Default value is 0 (if no rule activates defuzzifier)
+END_DEFUZZIFY
+
+RULEBLOCK No1
+	AND : MIN;	// Use 'min' for 'and' (also implicit use 'max' for 'or' to fulfill DeMorgan's Law)
+	ACT : MIN;	// Use 'min' activation method
+	ACCU : MAX;	// Use 'max' accumulation method
+
+	RULE 1  : IF tamanho_cabo IS muito_pequeno AND quantidade_emenda IS muito_pequena THEN atenuacao IS muito_pequena;
+  RULE 2  : IF tamanho_cabo IS muito_pequeno AND quantidade_emenda IS pequena THEN atenuacao IS pequena;
+  RULE 3  : IF tamanho_cabo IS muito_pequeno AND quantidade_emenda IS media THEN atenuacao IS media;
+  RULE 4  : IF tamanho_cabo IS muito_pequeno AND quantidade_emenda IS grande THEN atenuacao IS grande;
+  RULE 5  : IF tamanho_cabo IS muito_pequeno AND quantidade_emenda IS muito_grande THEN atenuacao IS muito_grande;
+
+  RULE 6  : IF tamanho_cabo IS pequeno AND quantidade_emenda IS muito_pequena THEN atenuacao IS muito_pequena;
+  RULE 7  : IF tamanho_cabo IS pequeno AND quantidade_emenda IS pequena THEN atenuacao IS pequena;
+  RULE 8  : IF tamanho_cabo IS pequeno AND quantidade_emenda IS media THEN atenuacao IS media;
+  RULE 9  : IF tamanho_cabo IS pequeno AND quantidade_emenda IS grande THEN atenuacao IS grande;
+  RULE 10 : IF tamanho_cabo IS pequeno AND quantidade_emenda IS muito_grande THEN atenuacao IS muito_grande;
+
+  RULE 11 : IF tamanho_cabo IS medio AND quantidade_emenda IS muito_pequena THEN atenuacao IS muito_pequena;
+  RULE 12 : IF tamanho_cabo IS medio AND quantidade_emenda IS pequena THEN atenuacao IS pequena;
+  RULE 13 : IF tamanho_cabo IS medio AND quantidade_emenda IS media THEN atenuacao IS media;
+  RULE 14 : IF tamanho_cabo IS medio AND quantidade_emenda IS grande THEN atenuacao IS grande;
+  RULE 15 : IF tamanho_cabo IS medio AND quantidade_emenda IS muito_grande THEN atenuacao IS muito_grande;
+
+  RULE 16 : IF tamanho_cabo IS grande AND quantidade_emenda IS muito_pequena THEN atenuacao IS pequena;
+  RULE 17 : IF tamanho_cabo IS grande AND quantidade_emenda IS pequena THEN atenuacao IS pequena;
+  RULE 18 : IF tamanho_cabo IS grande AND quantidade_emenda IS media THEN atenuacao IS media;
+  RULE 19 : IF tamanho_cabo IS grande AND quantidade_emenda IS grande THEN atenuacao IS grande;
+  RULE 20 : IF tamanho_cabo IS grande AND quantidade_emenda IS muito_grande THEN atenuacao IS muito_grande;
+
+  RULE 21 : IF tamanho_cabo IS muito_grande AND quantidade_emenda IS muito_pequena THEN atenuacao IS pequena;
+  RULE 22 : IF tamanho_cabo IS muito_grande AND quantidade_emenda IS pequena THEN atenuacao IS pequena;
+  RULE 23 : IF tamanho_cabo IS muito_grande AND quantidade_emenda IS media THEN atenuacao IS media;
+  RULE 24 : IF tamanho_cabo IS muito_grande AND quantidade_emenda IS grande THEN atenuacao IS grande;
+  RULE 25 : IF tamanho_cabo IS muito_grande AND quantidade_emenda IS muito_grande THEN atenuacao IS muito_grande;
+
+END_RULEBLOCK
+
+END_FUNCTION_BLOCK

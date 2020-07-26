@@ -1,0 +1,12 @@
+bool buscaBinaria(int vetor[], int comeco, int fim,int valor){
+    int meio = (comeco+fim)/2;
+    if(valor == vetor[meio]){
+        return true;
+    }else if(comeco > fim){
+        return false;
+    }else if( valor > vetor[meio]){
+        return buscaBinaria(vetor,meio+1,fim,valor);
+    }else if(valor < vetor[meio]){
+        return buscaBinaria(vetor,comeco,meio-1,valor);
+    }
+}

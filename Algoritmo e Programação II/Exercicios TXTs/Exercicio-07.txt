@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+   int matriz[10][10];
+   int vetorMaior[10] ={0,0,0,0,0,0,0,0,0,0};
+   int vetorMenor[10] ={0,0,0,0,0,0,0,0,0,0};
+   int contadorMaior=0;
+   int contadorMenor=0;
+   int contador=0;
+
+    int maior=0;
+    int menor=33000;
+
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cin>>matriz[i][j];
+        }
+    }
+
+
+
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            if(matriz[i][j] > maior){
+                vetorMaior[contador] = matriz[i][j];
+                maior = matriz[i][j];
+            }
+            if(matriz[j][i] < menor){
+                vetorMenor[contador] = matriz[j][i];
+                menor = matriz[j][i];
+            }
+        }
+        contador++;
+        maior=0;
+        menor=33000;
+    }
+
+
+
+for(int i=0;i<10;i++){
+    cout<<vetorMaior[i];
+}
+cout<<"\n";
+for(int i=0;i<10;i++){
+    cout<<vetorMenor[i];
+}
+
+
+
+}

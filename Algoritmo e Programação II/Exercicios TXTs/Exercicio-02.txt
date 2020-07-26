@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int fat(int fator){
+    if(fator == 1){
+        return 1;
+    }else{
+        return fator * fat(fator-1);
+    }
+}
+int main()
+{
+    int fator;
+    cout<<"Informe o Numero a ser fatorado";
+    cin>>fator;
+    cout<<fat(fator);
+
+
+}

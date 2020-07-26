@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+double k,soma=0.0;
+  cout<<"informe o Valor de N";
+  cin>>k;
+
+  for(double i=2.0;i<k;i++){
+    soma += 1.0/i;
+  }
+
+  cout<<soma+1;
+}

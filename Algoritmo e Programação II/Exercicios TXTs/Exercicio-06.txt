@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int matriz[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int Linha1=0,Linha2=0,Linha3=0,Coluna1=0,Coluna2=0,Coluna3=0,somaImpar=0,CMV,MaiorValor=0,MenorValor=33000,CMEV;
+
+    for(int i =0;i<3;i++){
+        for(int j =0;j<3;j++){
+
+            if(matriz[i][j]%2==1){
+                somaImpar += matriz[i][j];
+            }
+            if(matriz[i][j] > MaiorValor){
+                CMV=i;
+
+            }
+
+             if(matriz[i][j] < MenorValor){
+                MenorValor=matriz[i][j];
+                CMEV=j;
+
+            }
+        }
+       Linha1 += matriz[0][i];
+        Linha2 += matriz[1][i];
+        Linha3 += matriz[2][i];
+        Coluna1 += matriz[i][0];
+        Coluna2 += matriz[i][1];
+        Coluna3 += matriz[i][2];
+    }
+
+    cout<<"Soma linha1"<<Linha1<<"\n";
+    cout<<"Soma linha2"<<Linha2<<"\n";
+    cout<<"Soma linha3"<<Linha3<<"\n";
+    cout<<"Soma Coluna1"<<Coluna1<<"\n";
+    cout<<"Soma Coluna2"<<Coluna2<<"\n";
+    cout<<"Soma Coluna3"<<Coluna3<<"\n";
+    cout<<"Soma dos Impars"<<somaImpar<<"\n";
+
+    for(int i =0;i<3;i++){
+        for(int j =0;j<3;j++){
+        }
+        cout<<matriz[CMV][i]<<" ";
+    }
+    cout<<"\n";
+
+     for(int i =0;i<3;i++){
+        for(int j =0;j<3;j++){
+
+        }
+        cout<<matriz[i][CMEV]<<"\n";
+    }
+
+}

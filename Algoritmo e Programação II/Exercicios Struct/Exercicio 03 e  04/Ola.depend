@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1443574493 source:c:\users\6005870\desktop\ola\main.cpp
+	<iostream>
+	<windows.h>
+	<time.h>
+
