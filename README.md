@@ -20,17 +20,18 @@ Esse repositório tem como objetivo guardar os projetos que foram desenvolvidos 
 - Algoritmo I
 - Algoritmo II
 - Banco de Dados
+- Circuitos Digitais
 - Compiladores
 - Engenharia de Software I
 - Engenharia de Software II
 - Engenharia de Software II
 - Estrutura de Dados
-- Inteligencia Artificial
-- Linguagens Formais de Autômatos
-- Programação
+- Inteligencia Artificial I
+- Inteligencia Artificial II
 - Simulação Discreta de Incertezas
 
 ## 📝 Licença
+
 Este projeto está sobre a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
